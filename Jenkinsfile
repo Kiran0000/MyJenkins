@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Get the Home') {
       steps {
-        echo 'env.JENKINS_URL'
+        echo '${env.JENKINS_URL}'
       }
     }
   }
