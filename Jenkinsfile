@@ -1,7 +1,7 @@
 pipeline {
   agent any
   parameters {
-    choice(name: 'APP_ENV', choices:['sbx,sb1'])
+    choice(name: 'APP_ENV', choices:['sbx','sb1'])
   }
   stages {
     stage('Say Hello') {
@@ -16,7 +16,7 @@ pipeline {
     }
     stage('Print Env') {
       steps {
-        echo "$APP_ENV"
+        echo "parm.APP_ENV"
       }
     }
   }
