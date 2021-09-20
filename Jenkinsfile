@@ -1,7 +1,7 @@
 pipeline {
   agent any
   parameters {
-    choice(name: 'APP_ENV', choices:['sbx,sb1'],defaultValue:'sb1')
+    choice(name: 'APP_ENV', choices:['sbx,sb1'])
   }
   stages {
     stage('Say Hello') {
