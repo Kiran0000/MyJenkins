@@ -6,7 +6,7 @@ pipeline {
         echo 'Hello'
       }
     }
-    stage('Get the Home') {
+    stage('Jenkins URL') {
       steps {
         echo "${env.JENKINS_URL}"
       }
