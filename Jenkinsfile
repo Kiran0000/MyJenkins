@@ -16,7 +16,7 @@ pipeline {
     }
     stage('Print Env') {
       steps {
-        echo "$parm.APP_ENV"
+        echo "${APP_ENV}"
       }
     }
   }
