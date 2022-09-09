@@ -1,15 +1,15 @@
-pipeline {
+pipeline{
   agent any
-  stages {
-    stage('Say Hello') {
-      steps {
-        echo 'Hello'
-      }
-    }
-    stage('Get the Home') {
-      steps {
-        echo "${env.JENKINS_URL}"
-      }
+  options{
+    buildDiscard(logRotator(numToKeepStr:'5'))
+    disableConcurrentBuilds()
+  }
+  environments{
+    name = kiran
+  }
+  stages('Print Envs'){
+    steps{
+      echo "${env.name}"
     }
   }
 }
