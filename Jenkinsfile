@@ -4,7 +4,7 @@ pipeline{
     buildDiscard(logRotator(numToKeepStr:'5'))
     disableConcurrentBuilds()
   }
-  environments{
+  environment{
     name = kiran
   }
   stages('Print Envs'){
